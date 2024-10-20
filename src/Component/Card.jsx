@@ -5,7 +5,7 @@ const Card = ({pic}) => {
   return (
     <div>
       <div className="home_card_item">
-      <Image src={pic} fluid className='card_image'/>;
+      <Image src={pic} width={"400px"} fluid/>
       </div>
     </div>
   )

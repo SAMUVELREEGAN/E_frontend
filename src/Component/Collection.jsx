@@ -8,7 +8,7 @@ import { FaSearch } from "react-icons/fa";
 
 
 const Collection = () => {
-  const {products,search,showSearch} = useContext(ShopContext)
+  const {products,search,showSearch,setSearch} = useContext(ShopContext)
   const [category, setCategory] = useState([]);
   const [subCategory, setSubCategory] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
@@ -126,7 +126,7 @@ const Collection = () => {
         <div>
             <Title text1={"All"} text2={"Collection"}/>
            <div style={{textAlign:"center"}}>
-           <input type="text" placeholder='Search Products' style={{width:"60%"}}/><button style={{backgroundColor:"black",color:"white"}}><FaSearch /> </button>
+           <input type="text" placeholder='Search Products' style={{width:"60%"}} onChange={(e)=>setSearch(e.target.value)} value={search}/><button style={{backgroundColor:"black",color:"white"}} ><FaSearch /> </button>
            </div>
             <div className='collection_data'>
             {
